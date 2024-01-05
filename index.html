@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>PicDropZone</title>
+<link rel="stylesheet" href="style.css">
+<link rel = "icon" href = "img/picdropzonelogo.png" type = "image/x-icon">
+</head>
+<body>
+ <header>
+<a href="index.html" >
+ <img src="img/picdropzonelogo.png" alt="PicDropZone" class="logo">
+ </a>
+ <h1 class="aa" ><a href="index.html"></a>PicDropZone</h1>
+ <a class="cta" href="Contact Us.html"><button class="bt">Download Theme</button></a>
+</header>
+<div class="covering">
+<div class="content">
+<h1>Stunning royalty-free images with lots of Effects</h1>
+<p>Over 4.1 million+ high quality stock images shared by <a href="https://pixabay.com/" target="_blank" style="color: #fc485a;">&nbsp;Pixabay&nbsp;  </a> talented community <br> Download images with lots of effects that make your workflow easy..</p>
+ <form>
+ <button id="myBtn" onclick=myFunction()>Search</button>
+<input type="text" id="myInput" placeholder="   Search for all images in PicDropZone" onload="myFunction">          
+</form>
+<script>
+function myFunction() {
+var name = document.getElementById("myInput").value;
+localStorage.setItem("lastname", name);  
+window.open("Editor.html", "_blank") ;
+}
+var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event) {
+if (event.key === "Enter") {
+event.preventDefault();
+document.getElementById("myBtn").click();
+}
+});
+</script>
+</div>
+</div>
+</body>
+</html>
